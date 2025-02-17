@@ -1,3 +1,69 @@
 <div class="loginPage">
-  <h1>Hello world</h1>
+  <div class="loginContainer d-flex p-2 bd-highlight">
+    <div class="p-2 flex-fill bd-highlight loginImg">
+      <div class="loginData">
+        <h1 id="welcome">Welcome</h1>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label labelColor"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@gmail.com"
+            style="height: 50px"
+            [(ngModel)]="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label labelColor"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Password"
+            style="height: 50px"
+            [(ngModel)]="password"
+          />
+        </div>
+        <div class="btnStyle">
+          <button
+            type="button"
+            class="btn btn-primary"
+            style="
+              background-color: #7b95f9;
+              width: 42%;
+              padding: 10px;
+              font-size: 25px;
+            "
+            (click)="login()"
+          >
+            LogIn
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            style="
+              width: 42%;
+              margin-left: 40px;
+              padding: 10px;
+              font-size: 25px;
+              background-color: #f26b6d;
+            "
+            (click)="clearData()"
+          >
+            Clear
+          </button>
+          <div style="margin-top: 20px">
+            Don't have an account
+            <a routerLink="/signup" style="text-decoration: none">SignUp</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-2 flex-fill bd-highlight loginDetail"></div>
+  </div>
 </div>

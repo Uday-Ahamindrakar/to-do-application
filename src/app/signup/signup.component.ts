@@ -4,8 +4,14 @@ import { Component } from '@angular/core';
   selector: 'app-signup',
   standalone: false,
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css'
+  styleUrl: './signup.component.css',
 })
 export class SignupComponent {
+  email: string = '';
+  password: string = '';
+  name: string = '';
 
+  login() {}
+
+  clearData() {}
 }

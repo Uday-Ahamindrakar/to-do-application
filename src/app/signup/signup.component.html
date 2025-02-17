@@ -1,1 +1,73 @@
-<p>signup works!</p>
+<div class="loginPage">
+  <div class="loginContainer d-flex p-2 bd-highlight">
+    <div class="p-2 flex-fill bd-highlight loginImg">
+      <div class="loginData">
+        <h1 id="welcome">SignUp</h1>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label labelColor"
+            >Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Full Name"
+            [(ngModel)]="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label labelColor"
+            >Email address</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="name@gmail.com"
+            [(ngModel)]="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label labelColor"
+            >Set Password</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="exampleFormControlInput1"
+            placeholder="Password"
+            [(ngModel)]="password"
+          />
+        </div>
+        <div class="btnStyle">
+          <button
+            type="button"
+            class="btn btn-primary"
+            style="background-color: #7b95f9; width: 42%"
+            (click)="login()"
+          >
+            LogIn
+          </button>
+          <button
+            type="button"
+            class="btn btn-danger"
+            style="
+              width: 42%;
+              margin-left: 40px;
+
+              background-color: #f26b6d;
+            "
+            (click)="clearData()"
+          >
+            Clear
+          </button>
+          <div style="margin-top: 40px">
+            Already have an account
+            <a routerLink="/" style="text-decoration: none">LogIn</a>.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="p-2 flex-fill bd-highlight loginDetail"></div>
+  </div>
+</div>
