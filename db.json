@@ -24,5 +24,23 @@
       "email": "paras@gmail.com",
       "password": "paras1234"
     }
+  ],
+  "tasks": [
+    {
+      "email": "abc",
+      "task": "dummy"
+    },
+    {
+      "email": "paras@gmail.com",
+      "task": "Angular learning"
+    },
+    {
+      "email": "paras@gmail.com",
+      "task": "Python learning"
+    },
+    {
+      "email": "paras@gmail.com",
+      "task": "GenAi learning"
+    }
   ]
 }

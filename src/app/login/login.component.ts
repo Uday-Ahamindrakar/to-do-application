@@ -38,6 +38,7 @@ export class LoginComponent {
             token: this.generateRandomString(6),
           };
           localStorage.setItem('user', JSON.stringify(userData));
+          this.service.updateEmail(this.email);
           this.router.navigate(['/dashboard']);
         } else {
           this.email = '';

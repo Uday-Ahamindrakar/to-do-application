@@ -1,4 +1,31 @@
 <div class="dashboard">
-  <div class="sidebar"></div>
-  <div class="todocontent"></div>
+  <div class="sidebar">
+    <div class="container">
+      <div class="row row-cols-1">
+        <div class="row sidbarOptions">Dashboard</div>
+        <div class="row sidbarOptions">Completed</div>
+        <div class="row sidbarOptions">Deleted</div>
+        <!-- <div class="row sidbarOptions">Column</div> -->
+      </div>
+    </div>
+  </div>
+  <div class="todocontent">
+    <div class="heading">
+      <h1>To-Do's</h1>
+    </div>
+    <div class="actionbtn">
+      <button class="btn btn-primary btnStyle">+ Create New Task</button>
+    </div>
+    <h3 class="pending">Pending</h3>
+    <div class="tasklist">
+      <div class="task" *ngFor="let user of data; let i = index">
+        <label>
+          <input type="checkbox" (change)="markAsComplete(i)" />
+          {{ user }}
+        </label>
+        <!-- <h3>{{ user }}</h3> -->
+        <button class="btn btn-danger" (click)="deleteItem(i)">Delete</button>
+      </div>
+    </div>
+  </div>
 </div>
