@@ -1,16 +1,22 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "John Doe",
       "email": "john@example.com",
       "password": "jon123"
     },
     {
-      "id": 2,
-      "name": "Jane Doe",
-      "email": "jane@example.com",
-      "password": "jon123"
+      "id": "492b",
+      "name": "Uday Jain",
+      "email": "uday@gmail.com",
+      "password": "Uday@4441"
+    },
+    {
+      "id": "8730",
+      "name": "Sam",
+      "email": "sam@gmail.com",
+      "password": "sam123"
     }
   ]
 }

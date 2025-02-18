@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-signup',
@@ -8,15 +9,36 @@ import { Router } from '@angular/router';
   styleUrl: './signup.component.css',
 })
 export class SignupComponent {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private service: ServiceService) {}
 
-  email: string = '';
-  password: string = '';
-  name: string = '';
+  user = {
+    name: '',
+    email: '',
+    password: '',
+  };
+
+  // email: string = '';
+  // password: string = '';
+  // name: string = '';
 
   register() {
-    this.router.navigate(['']);
+    if (
+      this.user.name != '' &&
+      this.user.email != '' &&
+      this.user.password != ''
+    ) {
+      this.service.registerUser(this.user).subscribe((data) => {
+        alert('User Successfully Submited');
+        this.router.navigate(['']);
+      });
+    } else {
+      alert('please provide valid details');
+    }
   }
 
-  clearData() {}
+  clearData() {
+    this.user.name = '';
+    this.user.email = '';
+    this.user.password = '';
+  }
 }
