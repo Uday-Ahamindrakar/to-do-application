@@ -17,6 +17,12 @@
       "name": "Sam",
       "email": "sam@gmail.com",
       "password": "sam123"
+    },
+    {
+      "id": "78cd",
+      "name": "paras",
+      "email": "paras@gmail.com",
+      "password": "paras1234"
     }
   ]
 }

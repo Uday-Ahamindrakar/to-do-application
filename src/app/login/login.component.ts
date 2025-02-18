@@ -33,6 +33,11 @@ export class LoginComponent {
       )
       .subscribe((userExists) => {
         if (userExists) {
+          const userData = {
+            name: this.email,
+            token: this.generateRandomString(6),
+          };
+          localStorage.setItem('user', JSON.stringify(userData));
           this.router.navigate(['/dashboard']);
         } else {
           this.email = '';
@@ -44,7 +49,17 @@ export class LoginComponent {
 
   clearData() {}
 
-  // gotoSignup() {
-  //   this.router.navigate(['/signup']);
-  // }
+  generateRandomString(length: number): string {
+    const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'; // Possible characters
+    let result = '';
+
+    // Loop through and pick random characters
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length); // Random index
+      result += characters[randomIndex]; // Add character to result
+    }
+
+    return result;
+  }
 }
